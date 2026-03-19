@@ -5,14 +5,34 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
 <link rel="stylesheet" href="style.css">
+<script>
+    window.onload = function(){
+
+    let algne = document.getElementById("clicks");
+    algne.innerHTML = localStorage.getItem("test");
+    }
+
+    function kaunter(){
+        let algne = document.getElementById("clicks");
+        let tulemus = Number(algne.innerHTML) + 1;
+        algne.innerHTML = tulemus;
+
+        localStorage.setItem("test",tulemus);
+    }
+
+</script> 
 </head>
 <body>
+
+    <h1>Kassi klikker</h1>
+    <h2>Klikke kokku: <span id="clicks">500</span></h2>
     <div class="nav">
     <a href="index.html">avaleht</a>
     <a href="kontakt.html">kontakt</a>
     <h1>veebileht</h1>
     </div>
 <p>see pole veebileht</p>
+<img src="https://www.felixclub.ee/images/Aasta%20parimad%20kassid/412402766_3028710177264749_8456756125902127774_n.jpg" alt="cat" onclick="kaunter()">
  
 </body>
-</html>
+</html> 
